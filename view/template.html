@@ -10,13 +10,236 @@
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
-    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
-</head>
-<body>
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <!-- Font-icon css-->
+    <!--<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">-->
+    <link href="//cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/layui/css/layui.css" media="all">
 
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body class="sidebar-mini fixed  pace-done">
+<div class="wrapper">
+    <!--头部开始-->
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top navbar-static-top">
+            <div class="container-fluid main-header hidden-print">
+                <!-- Sidebar toggle button-->
+                <span class="sidebar-toggle2 glyphicon glyphicon-indent-right" aria-hidden="true" data-toggle="offcanvas"></span>
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">java快速开发平台 &nbsp;&nbsp;&nbsp;</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">在线开发 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">办公管理</a></li>
+                        <li><a href="#">客户管理</a></li>
+                        <li><a href="#">客户管理</a></li>
+                        <li><a href="#">客户管理</a></li>
+                        <li><a href="#">客户管理</a></li>
+                        <li><a href="#">客户管理</a></li>
+                        <li><a href="#">客户管理</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多<!--<span class="caret"></span>--></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li title="首页" ><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+                        <li title="切换样式"><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
+
+                        <!--用户信息-->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <img src="../image/head.jpg" style="width: 25px;height: 25px;position: absolute;left: 1rem;top: 0;bottom: 0;margin:auto;" alt="头像" class="img-circle">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                周某某
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">个人资料</a></li>
+                                <li><a href="#">更换密码</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">样式设置</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">安全退出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+
+    <!--头部结束-->
+
+    <!--##############-->
+
+    <!-- 侧边导航开始-->
+    <aside class="main-sidebar hidden-print">
+        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 730px;"><section class="sidebar" style="overflow: hidden; width: auto; height: 730px;">
+            <div class="user-panel">
+                <div class="pull-left image"><img class="img-circle" src="../image/head.jpg" alt="User Image"></div>
+                <div class="pull-left info">
+                    <p>周某某</p>
+                    <div class="btn-group btn-group-xs" role="group">
+                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="个人设置">
+                            <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="退出">
+                            <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="主页">
+                            <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <!--<p class="designation">Frontend Developer</p>-->
+                </div>
+            </div>
+            <hr/>
+            <!-- Sidebar Menu-->
+            <ul class="sidebar-menu">
+                <li class=""><a href="">
+                    <i class="fa fa-dashboard"></i>
+                    <span>系统管理</span></a></li>
+                <li class="treeview"><a href=""><i class="fa fa-laptop"></i><span>基本信息管理</span><i class="fa fa-angle-right"></i></a>
+                    <ul class="treeview-menu" style="display: none;">
+                        <li><a href=""><i class="fa fa-circle-o"></i></a></li>
+                        <li><a href="" target="_blank"><i class="fa fa-circle-o"></i> Font Icons</a></li>
+                        <li><a href=""><i class="fa fa-circle-o"></i> Cards</a></li>
+                        <li><a href=""><i class="fa fa-circle-o"></i> Widgets</a></li>
+                    </ul>
+                </li>
+                <li class="treeview"><a href="#"><i class="fa fa-share"></i><span>系统监控</span><i class="fa fa-angle-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+                        <li class="treeview"><a href="#"><i class="fa fa-circle-o"></i><span> Level One</span><i class="fa fa-angle-right"></i></a>
+                            <ul class="treeview-menu">
+                                <li><a href=""><i class="fa fa-circle-o"></i> Level Two</a></li>
+                                <li><a href=""><i class="fa fa-circle-o"></i><span> Level Two</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section><div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.8); width: 3px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 730px;"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+    </aside>
+    <!-- 侧边导航结束-->
+
+    <!--##############-->
+
+    <!-- 内容区域开始-->
+    <div class="content-wrapper">
+        <!--<br/>-->
+        <div class="row" style="border:#00000025 solid 1px;height: 100%">
+            <!-- 此处是相关代码 -->
+            <ul class="nav nav-tabs" role="tablist">
+            </ul>
+            <div class="tab-content" style="width:100%;height: 100%;min-height: 600px;background-color: #ffffff;padding: 10px">
+            </div>
+            <!-- 相关代码结束 -->
+        </div>
+    </div>
+    <!-- 内容区域结束-->
+    <!--####################-->
+</div>
+
+
+
+
+
+
+<script src="../js/jquery-2.1.1.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="../js/bootstrap.min.js"></script>
+<script src="../js/pace.min.js"></script>
+<script src="../js/closable-tab-div.js"></script>
+<script src="../js/main.js"></script>
+<script type="text/javascript">
+    (function() {
+        $(function() {
+            var collapseMyMenu, expandMyMenu, hideMenuTexts, showMenuTexts;
+            expandMyMenu = function() {
+                return $("nav.sidebar").removeClass("sidebar-menu-collapsed").addClass("sidebar-menu-expanded");
+            };
+            collapseMyMenu = function() {
+                return $("nav.sidebar").removeClass("sidebar-menu-expanded").addClass("sidebar-menu-collapsed");
+            };
+            showMenuTexts = function() {
+                return $("nav.sidebar ul a span.expanded-element").show();
+            };
+            hideMenuTexts = function() {
+                return $("nav.sidebar ul a span.expanded-element").hide();
+            };
+            return $("#justify-icon").click(function(e) {
+                if ($("#leftSidebar").hasClass("sidebar-menu-collapsed")) {
+                    expandMyMenu();
+                    showMenuTexts();
+                    $(this).css({
+                        color: "#000"
+                    });
+                } else if ($("#leftSidebar").hasClass("sidebar-menu-expanded")) {
+                    collapseMyMenu();
+                    hideMenuTexts();
+                    $(this).css({
+                        color: "#FFF"
+                    });
+                }
+                // if ($(this).parent("nav.sidebar").hasClass("sidebar-menu-collapsed")) {
+                //     expandMyMenu();
+                //     showMenuTexts();
+                //     $(this).css({
+                //         color: "#000"
+                //     });
+                // } else if ($(this).parent("nav.sidebar").hasClass("sidebar-menu-expanded")) {
+                //     collapseMyMenu();
+                //     hideMenuTexts();
+                //     $(this).css({
+                //         color: "#FFF"
+                //     });
+                // }
+                return false;
+            });
+        });
+
+    }).call(this);
+
+</script>
+
+<script>
+    $(function(){
+        var item = {'id':'1','name':'首页','url':'center.html','closable':false};
+        closableTab.addTab(item);
+        var item1 = {'id':'12','name':'首页2','url':'center.html','closable':true};
+        closableTab.addTab(item1);
+    });
+    function add(){
+        var id = $('#id').val();
+        var name = $('#name').val();
+        var uri = $('#url').val();
+        var closable = $('#closable').val();
+        var item = {'id':id,'name':name,'url':uri,'closable':closable==1?true:false};
+        closableTab.addTab(item);
+    }
+</script>
 </body>
 </html>

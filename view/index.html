@@ -13,21 +13,129 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
     <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+    <style type="text/css">
+        .panel-group{max-height:770px;overflow: auto;}
+        .leftMenu{margin:10px;margin-top:5px;}
+        .leftMenu .panel-heading{font-size:14px;padding-left:20px;height:36px;line-height:36px;color:white;position:relative;cursor:pointer;}/*转成手形图标*/
+        .leftMenu .panel-heading span{position:absolute;right:10px;top:12px;}
+        .leftMenu .menu-item-left{padding: 2px; background: transparent; border:1px solid transparent;border-radius: 6px;}
+        .leftMenu .menu-item-left:hover{background:#C4E3F3;border:1px solid #1E90FF;}
+    </style>
 
 </head>
 <body>
-    <div class="container-fluid" style="height: 100%">
+    <!--<div class="container-fluid" style="height: 100%">-->
+    <div class="container" style="width: 100%">
         <!--顶部-->
         <div class="row" style="height: 20%;background-color: #1b6d85">
             <center>顶部</center>
         </div>
         <div class="row" style="height: 70%">
             <div class="col-lg-2" style="background-color: #ffffff">
-                <ul class="nav nav-pills nav-stacked ">
-                    <li role="presentation" class="active"><a href="#">Home</a></li>
-                    <li role="presentation"><a href="#">Profile</a></li>
-                    <li role="presentation"><a href="#">Messages</a></li>
-                </ul>
+                <div class="panel-group table-responsive" role="tablist">
+                    <div class="panel panel-primary leftMenu">
+                        <!-- 利用data-target指定要折叠的分组列表 -->
+                        <div class="panel-heading" id="collapseListGroupHeading1" data-toggle="collapse" data-target="#collapseListGroup1" role="tab" >
+                            <h4 class="panel-title">
+                                分组1
+                                <span class="glyphicon glyphicon-chevron-up right"></span>
+                            </h4>
+                        </div>
+                        <!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
+                        <div id="collapseListGroup1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading1">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <!-- 利用data-target指定URL -->
+                                    <button class="menu-item-left" data-target="test2.html">
+                                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-1
+                                    </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button class="menu-item-left">
+                                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-2
+                                    </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button class="menu-item-left">
+                                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-3
+                                    </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button class="menu-item-left">
+                                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-4
+                                    </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button class="menu-item-left">
+                                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-5
+                                    </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button class="menu-item-left">
+                                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-6
+                                    </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button class="menu-item-left">
+                                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-7
+                                    </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button class="menu-item-left">
+                                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-8
+                                    </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button class="menu-item-left">
+                                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-9
+                                    </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button class="menu-item-left">
+                                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-10
+                                    </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button class="menu-item-left">
+                                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-11
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--panel end-->
+                    <div class="panel panel-primary leftMenu">
+                        <div class="panel-heading" id="collapseListGroupHeading2" data-toggle="collapse" data-target="#collapseListGroup2" role="tab" >
+                            <h4 class="panel-title">
+                                分组2
+                                <span class="glyphicon glyphicon-chevron-down right"></span>
+                            </h4>
+                        </div>
+                        <div id="collapseListGroup2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading2">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <button class="menu-item-left">
+                                        <span class="glyphicon glyphicon-triangle-right"></span>分组项2-1
+                                    </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button class="menu-item-left">
+                                        <span class="glyphicon glyphicon-triangle-right"></span>分组项2-2
+                                    </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button class="menu-item-left">
+                                        <span class="glyphicon glyphicon-triangle-right"></span>分组项2-3
+                                    </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button class="menu-item-left">
+                                        <span class="glyphicon glyphicon-triangle-right"></span>分组项2-4
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-8" style="background-color: #2aabd2;height: 100%">中</div>
         </div>
@@ -41,5 +149,14 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="../js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $(".panel-heading").click(function(e){
+                /*切换折叠指示图标*/
+                $(this).find("span").toggleClass("glyphicon-chevron-down");
+                $(this).find("span").toggleClass("glyphicon-chevron-up");
+            });
+        });
+    </script>
 </body>
 </html>
