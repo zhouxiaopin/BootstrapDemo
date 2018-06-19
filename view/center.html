@@ -22,25 +22,132 @@
     <script src="../js/bootstrap-table-toolbar.js"></script>
     <script src="../js/bootstrap-treegrid.js"></script>
     <script src="../js/jquery-2.1.4.min.js"></script>
+    <style>
+        .searchFieldset{
+            min-height: 80px;
+            /*border-color: #C8C8C8;*/
+            /*border-radius:0.5px;*/
+            border: none;
+            padding: 5px;
+            display: block;
+            color: #667ADD;
+            font-size: 12px;
+            border: 1px solid #00000045;
+            border-radius: 5px;
+        }
+        .legend{
+            width: auto;
+            height: auto;
+            border: none;
+            margin: 0;
+            padding: 0;
+            margin-left: 10px;
+            background: none;
+            font-size: 14px;
+            color: #00000070;
+        }
+        .cus-content table td{
+            text-align: center;
+            vertical-align: middle;
+        }
+        .cus-content table .pagination{
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
+    <div class="cus-content panel panel-default">
+        <div class="panel-heading">
+            <fieldset class='searchFieldset'>
+                <legend class='legend'>信息查询</legend>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="exampleInputName2">Name</label>
+                        <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail2">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send invitation</button>
+                </form>
+            </fieldset>
+        </div>
+
+        <div style="width: 100%;height: auto;background-color: #667ADD55">
+            <button type="button" class="btn btn-primary">添加</button>
+            <button type="button" class="btn btn-primary">修改</button>
+            <button type="button" class="btn btn-primary">删除</button>
+            <button type="button" class="btn btn-primary">查看</button>
+        </div>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>城市</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>周某某</td>
+                    <td>22</td>
+                    <td>广州</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>周某某</td>
+                    <td>22</td>
+                    <td>广州</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>周某某</td>
+                    <td>22</td>
+                    <td>广州</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>周某某</td>
+                    <td>22</td>
+                    <td>广州</td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
     <div class="container-fluid">
         <div class="row">
-            <form class="form-inline">
-                <div class="form-group">
-                    <label for="exampleInputName2">Name</label>
-                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail2">Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-                </div>
-                <button type="submit" class="btn btn-primary">Send invitation</button>
-            </form>
+
         </div>
 
         <div class="row">
-            <table id="table"></table>
+            <!--<table id="table"></table>-->
             <!--<table id="table"-->
                    <!--data-toggle="table"-->
                    <!--data-height="460"-->
@@ -58,42 +165,65 @@
             <!--</table>-->
 
         </div>
+        <br/>
+        <!--<div class="row">-->
+            <!--<div style="width: 100%;height: auto;background-color: #667ADD55">-->
+                <!--<button type="button" class="btn btn-primary">添加</button>-->
+                <!--<button type="button" class="btn btn-primary">修改</button>-->
+                <!--<button type="button" class="btn btn-primary">删除</button>-->
+                <!--<button type="button" class="btn btn-primary">查看</button>-->
+            <!--</div>-->
+        <!--</div>-->
         <div class="row">
-            <!--<table class="table table-bordered table-striped table-hover tree_table">-->
-                <!--<thead>-->
-                    <!--<th>编号</th>-->
-                    <!--<th>姓名</th>-->
-                    <!--<th>年龄</th>-->
-                    <!--<th>城市</th>-->
-                <!--</thead>-->
-                <!--<tbody>-->
-                    <!--<tr>-->
-                        <!--<td>1</td>-->
-                        <!--<td>周某某</td>-->
-                        <!--<td>22</td>-->
-                        <!--<td>广州</td>-->
-                    <!--</tr>-->
-                    <!--<tr>-->
-                        <!--<td>1</td>-->
-                        <!--<td>周某某</td>-->
-                        <!--<td>22</td>-->
-                        <!--<td>广州</td>-->
-                    <!--</tr>-->
-                    <!--<tr>-->
-                        <!--<td>1</td>-->
-                        <!--<td>周某某</td>-->
-                        <!--<td>22</td>-->
-                        <!--<td>广州</td>-->
-                    <!--</tr>-->
-                    <!--<tr>-->
-                        <!--<td>1</td>-->
-                        <!--<td>周某某</td>-->
-                        <!--<td>22</td>-->
-                        <!--<td>广州</td>-->
-                    <!--</tr>-->
-                <!--</tbody>-->
-            <!--</table>-->
-
+           <!-- <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>姓名</th>
+                        <th>年龄</th>
+                        <th>城市</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>周某某</td>
+                        <td>22</td>
+                        <td>广州</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>周某某</td>
+                        <td>22</td>
+                        <td>广州</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>周某某</td>
+                        <td>22</td>
+                        <td>广州</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>周某某</td>
+                        <td>22</td>
+                        <td>广州</td>
+                    </tr>
+                </tbody>
+            </table>-->
+            <table class="layui-table" lay-data="{height: 'full-200', cellMinWidth: 80, page: true, limit:30, url:'/demo/table/user/'}">
+                <thead>
+                <tr>
+                    <th lay-data="{type:'checkbox'}">ID</th>
+                    <th lay-data="{field:'id', width:100, sort: true}">ID</th>
+                    <th lay-data="{field:'username', width:100}">用户名</th>
+                    <th lay-data="{field:'sex', width:100, sort: true}">性别</th>
+                    <th lay-data="{field:'sign', minWidth: 150}">签名</th>
+                    <th lay-data="{field:'experience', sort: true, align: 'right'}">积分</th>
+                    <th lay-data="{field:'score', sort: true, minWidth: 100, align: 'right'}">评分</th>
+                </tr>
+                </thead>
+            </table>
             <!--分页-->
            <!-- <nav aria-label="Page navigation">
                 <ul class="pagination" >
@@ -120,18 +250,7 @@
         </div>
     </div>
     <script>
-        $('#table').bootstrapTable({
-            // url: ActionUrl + 'GetMenuList',
-            toolbar: '#toolbar',
-            sidePagination: 'client',
-            pagination: false,
-            treeView: true,
-            treeId: "Id",
-            treeField: "Name",
-            treeRootLevel: 1,
-            clickToSelect: true,//collapseIcon: "glyphicon glyphicon-triangle-right",//折叠样式
-            //expandIcon: "glyphicon glyphicon-triangle-bottom"//展开样式
-        });
+
     </script>
 </body>
 </html>
